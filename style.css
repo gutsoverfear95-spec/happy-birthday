@@ -1,0 +1,45 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Be Vietnam Pro',sans-serif;background:#070412;color:#fff;overflow-x:hidden}
+canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+#fw{z-index:5}
+.neb{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(168,85,247,.28),transparent 70%),radial-gradient(ellipse 50% 40% at 80% 30%,rgba(255,77,141,.22),transparent 70%)}
+section{position:relative;z-index:10;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;flex-direction:column;text-align:center}
+.hidden{display:none!important}
+.btn{background:linear-gradient(135deg,#ff4d8d,#a855f7);border:none;color:#fff;padding:15px 36px;font-size:1.1rem;font-weight:800;border-radius:999px;cursor:pointer;margin-top:20px;box-shadow:0 8px 30px rgba(255,77,141,.5)}
+.btn:hover{transform:scale(1.05)}
+.btn.gray{background:#555}
+.card{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:28px 24px;max-width:720px;width:100%;margin:16px auto}
+.lock{max-width:560px;width:100%;background:rgba(255,255,255,.07);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:44px 30px}
+.hb{font-size:72px;animation:bt 1.1s infinite;display:inline-block}
+@keyframes bt{25%{transform:scale(1.25)}60%{transform:scale(1.2)}}
+.tt{font-family:'Dancing Script',cursive;font-size:clamp(2.4rem,7vw,4.4rem);background:linear-gradient(90deg,#ffd166,#ff4d8d,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big{font-family:'Dancing Script',cursive;font-size:clamp(3rem,9vw,5.8rem);line-height:1;background:linear-gradient(90deg,#ffd166,#ff6b9d,#c084fc,#7dd3fc);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-style:italic;color:#ffd9e8;font-size:1.2rem;margin:10px 0}
+.hint{opacity:.7;margin-top:12px}
+.cake{font-size:100px}
+#candle{font-size:40px;margin-bottom:-26px}
+.env{position:relative;width:min(420px,88vw);height:280px;margin:0 auto;cursor:pointer}
+.bk{position:absolute;inset:0;background:linear-gradient(135deg,#3b1d5a,#1e1b4b);border-radius:16px}
+.lt{position:absolute;left:14px;right:14px;top:14px;bottom:14px;background:#fff8f0;color:#4a1d3a;border-radius:12px;padding:20px 16px;transition:1s;z-index:2;overflow:hidden}
+.lt h3{font-family:'Dancing Script',cursive;font-size:1.9rem;color:#d81b60}
+.lt p{font-size:.93rem;line-height:1.7;margin-top:8px}
+.fl{position:absolute;left:0;right:0;top:0;height:150px;background:linear-gradient(135deg,#ff4d8d,#7c3aed);clip-path:polygon(0 0,100% 0,50% 100%);z-index:4;transition:.8s;transform-origin:top}
+.env.open .fl{transform:rotateX(180deg);z-index:1}
+.env.open .lt{transform:translateY(-175px) scale(1.05);z-index:5;min-height:320px;box-shadow:0 20px 60px #000}
+.sl{position:absolute;left:50%;top:128px;transform:translate(-50%,-50%);width:64px;height:64px;background:radial-gradient(circle,#ffd166,#ff4d8d);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:6}
+.env.open .sl{opacity:0}
+#cdn{font-size:clamp(6rem,22vw,12rem);font-weight:800;background:linear-gradient(#fff,#ffd166,#ff4d8d);-webkit-background-clip:text;background-clip:text;color:transparent}
+#typebox{min-height:120px;text-align:left;line-height:1.9;color:#ffe4ef;margin-top:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.rs{background:rgba(255,77,141,.15);border-radius:16px;padding:16px}
+.rs b{color:#ffd166}
+#love{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+#love div{background:#0008;border:1px solid #ffd166;border-radius:14px;padding:10px 18px}
+#love span{font-size:1.6rem;color:#ffd166;font-weight:800}
+#musicB{position:fixed;top:14px;right:14px;z-index:50;background:rgba(255,255,255,.12);border-radius:999px;padding:10px 16px;cursor:pointer}
+#editB{position:fixed;bottom:14px;right:14px;z-index:50;background:rgba(255,255,255,.1);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:.8rem}
+#md{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.75);padding:20px}
+.mbox{background:#2a1445;border:1px solid #ffd166;border-radius:26px;padding:34px 26px;max-width:480px;text-align:center}
+.bl{position:fixed;bottom:-150px;pointer-events:none;z-index:4;animation:fu linear forwards}
+@keyframes fu{to{transform:translateY(-120vh) rotate(15deg)}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
