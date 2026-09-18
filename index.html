@@ -18,14 +18,21 @@
 <button class="btn" onclick="goStep(2)">Mở bất ngờ 🎁</button>
 <p class="hint">💡 Nhớ bật loa nhé em!</p>
 </div></section>
-<section id="s2" class="hidden"><div>
+<section id="s2" class="hidden"><div class="env-stage">
 <h1 class="tt">Chạm vào phong thư nhé 💌</h1>
-<div style="height:190px"></div>
+<p class="hint">Có người gửi em một điều bí mật...</p>
+<div class="tap-hint" id="tapHint">👇 Chạm để mở 👇</div>
+<div class="env-wrap">
+<div class="env-glow"></div>
 <div class="env" id="env" onclick="openEnv()">
 <div class="bk"></div>
-<div class="lt"><h3>Gửi em yêu!</h3><p>Chúc mừng sinh nhật cô gái đẹp nhất thế gian! Tuổi mới thật xinh, cười thật nhiều, và mãi bên anh nhé. Yêu em 3000! 💖<br><br><b>— Chồng tương lai 😘</b></p></div>
-<div class="fl"></div><div class="sl">💝</div>
+<div class="pocket"></div>
+<div class="lt" id="envLetter"><div class="lt-inner"><h3>Gửi em yêu!</h3><p>Chúc mừng sinh nhật cô gái đẹp nhất thế gian! Tuổi mới thật xinh, cười thật nhiều, và mãi bên anh nhé. Yêu em 3000! 💖<br><br><b>— Chồng tương lai 😘</b></p></div></div>
+<div class="fl"></div><div class="sl" id="envSeal">💝</div>
+<div class="mini-heart mh1">💜</div><div class="mini-heart mh2">💖</div><div class="mini-heart mh3">✨</div>
 </div>
+</div>
+<div id="letterPop" class="hidden"><div class="letter-card"><div class="stamp">💌</div><h3>Gửi em yêu!</h3><p>Chúc mừng sinh nhật cô gái đẹp nhất thế gian! Tuổi mới thật xinh, cười thật nhiều, và mãi bên anh nhé. Yêu em 3000! 💖</p><p class="sign">— Chồng tương lai 😘</p><button class="btn" onclick="goStep(3)">Tiếp tục ➜</button></div></div>
 <div id="envBtn" class="hidden"><button class="btn" onclick="goStep(3)">Tiếp tục ➜</button></div>
 </div></section>
 <section id="s3" class="hidden"><div><p class="hint">Đếm ngược...</p><div id="cdn">3</div></div></section>
@@ -34,7 +41,7 @@
 <p class="sub">Chúc mừng ngày công chúa của anh ra đời 🎂✨</p>
 <div class="music-panel">
 <div class="eq" id="eq"><span></span><span></span><span></span><span></span><span></span></div>
-<div style="flex:1;min-width:200px;text-align:left"><b>🎶 Happy Birthday phiên bản Anh sáng tác</b><br><span class="hint" style="margin:0">Bấm play là có nhạc 100% — không cần mạng!</span></div>
+<div style="flex:1;min-width:200px;text-align:left"><b>🎶 Nhạc Happy Birthday (tự phát, không cần mạng)</b><br><span class="hint" style="margin:0">Bấm Play là kêu 100% trên cả Vercel!</span></div>
 <button class="btn small" id="playBtn" onclick="toggleSong()">▶ Play nhạc</button>
 </div>
 <div class="music-panel">
