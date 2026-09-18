@@ -91,4 +91,6 @@ section{position:relative;z-index:10;min-height:100vh;display:flex;align-items:c
 .bl{position:fixed;bottom:-150px;pointer-events:none;z-index:4;animation:fu linear forwards}
 @keyframes fu{to{transform:translateY(-120vh) rotate(15deg)}}
 @keyframes fu{to{transform:translateY(-120vh) rotate(15deg)}}
+.yt-input{flex:1;min-width:200px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:12px;padding:11px 14px;outline:none}
+#ytWrap{position:fixed;left:-9999px;top:-9999px;width:320px;height:180px;opacity:.01;pointer-events:none}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}

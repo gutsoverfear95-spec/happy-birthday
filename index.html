@@ -42,7 +42,7 @@
 <p class="sub">Chúc mừng ngày công chúa của anh ra đời 🎂✨</p>
 <div class="music-panel">
 <div class="eq" id="eq"><span></span><span></span><span></span><span></span><span></span></div>
-<div style="flex:1;min-width:200px;text-align:left"><b>🎶 Nhạc Happy Birthday (tự phát, không cần mạng)</b><br><span class="hint" style="margin:0">Bấm Play là kêu 100% trên cả Vercel!</span></div>
+<div style="flex:1;min-width:200px;text-align:left"><b>🎶 Nhạc sinh nhật</b><br><span class="hint" style="margin:0" id="musicStatus">Bấm Play là kêu — thử MP3, YouTube rồi piano tự đánh!</span></div>
 <button class="btn small" id="playBtn" onclick="toggleSong()">▶ Play nhạc</button>
 </div>
 <div class="music-panel">
@@ -50,6 +50,11 @@
 <button class="btn small gold" onclick="speakLove()">🔊 Nghe lời chúc</button>
 <label class="btn small ghost" style="margin-top:20px;cursor:pointer">📁 Tải nhạc 2 đứa<input type="file" id="fileUp" accept="audio/*" class="hidden" onchange="uploadSong(this)"></label>
 </div>
+<div class="music-panel yt-panel">
+<div style="flex:1;text-align:left"><b>▶️ Nhạc YouTube dự phòng</b><br><span class="hint" style="margin:0">Dán link YouTube bài 2 đứa thích vào đây:</span>
+<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><input id="ytInput" class="yt-input" placeholder="Dán link YouTube... VD: https://youtu.be/..." value=""><button class="btn small" onclick="loadYT()">Phát</button></div></div>
+</div>
+<div id="ytWrap" class="hidden"><div id="ytPlayer"></div></div>
 <div class="card"><div id="candle">🕯️🕯️🕯️</div><div class="cake">🎂</div>
 <p class="hint">Nhấn nút để thổi nến + ước nguyện!</p>
 <button class="btn" id="blowBtn" onclick="blow()">Thổi nến 🎂</button></div>
@@ -89,8 +94,9 @@
 <p style="margin:12px;line-height:1.8">Anh cũng yêu em nhất trên đời! Chúc mừng sinh nhật công chúa! Mãi bên nhau nhé! 🥰</p>
 <button class="btn" onclick="closeMd()">Yêu anh! 💜</button>
 </div></div>
-<audio id="au" loop preload="auto"><source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_558ef6608c.mp3?filename=happy-birthday-155461.mp3"></audio>
+<audio id="au" loop preload="auto" src="music.mp3"></audio>
 <audio id="customAu" loop></audio>
+<audio id="voiceAu"></audio>
 <div id="finaleOv" class="hidden"><div class="tt" id="finaleTxt">Anh Yêu Em!</div></div>
 <script src="script.js"></script>
 </body></html>

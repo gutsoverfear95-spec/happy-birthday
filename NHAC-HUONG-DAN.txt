@@ -1,0 +1,18 @@
+# HƯỚNG DẪN THÊM NHẠC XỊN (chỉ 1 phút)
+Web đang phát piano tự đánh. Muốn nhạc hay như bản gốc thì làm 1 trong 2 cách:
+
+## Cách 1 (khuyên dùng): bỏ file MP3 vào là xong
+1. Tải 1 bản Happy Birthday MP3 (không bản quyền, ví dụ tìm "happy birthday piano instrumental mp3 no copyright")
+2. Đổi tên thành `music.mp3`
+3. Copy vào cùng thư mục với index.html
+4. Push lên GitHub/Vercel là web tự phát file này, không cần mạng phụ!
+
+## Cách 2: dán link YouTube
+- Mở web, kéo tới phần "Nhạc YouTube dự phòng", dán link bài hát vào, bấm Phát.
+- Web nhớ link đó luôn (lưu localStorage), lần sau bấm Play là phát YouTube.
+
+## Thứ tự ưu tiên khi bấm Play:
+1. File bạn tải lên (nút Tải nhạc 2 đứa)
+2. File music.mp3 (nếu có)
+3. Nhạc YouTube đã lưu (nếu có)
+4. Piano WebAudio tự đánh (luôn kêu, không bao giờ tịt)
