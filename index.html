@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Em Yeu</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Be+Vietnam+Pro:wght@400;800&display=swap" rel="stylesheet">
+<title>💜 Happy Birthday Em Yêu 💜</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Be+Vietnam+Pro:wght@400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,51 +13,51 @@
 <canvas id="fw"></canvas>
 <section id="s1"><div class="lock">
 <div class="hb">💜</div>
-<h1 class="tt">Co bat ngo cho em ne!</h1>
-<p class="hint">Anh da chuan bi ca tuan nay... Em san sang chua?</p>
-<button class="btn" onclick="goStep(2)">Mo bat ngo 🎁</button>
-<p class="hint">💡 Nho bat loa nhe em!</p>
+<h1 class="tt">Có bất ngờ cho em nè!</h1>
+<p class="hint">Anh đã chuẩn bị cả tuần nay... Em sẵn sàng chưa?</p>
+<button class="btn" onclick="goStep(2)">Mở bất ngờ 🎁</button>
+<p class="hint">💡 Nhớ bật loa nhé em!</p>
 </div></section>
 <section id="s2" class="hidden"><div>
-<h1 class="tt">Cham vao phong thu nhe 💌</h1>
+<h1 class="tt">Chạm vào phong thư nhé 💌</h1>
 <div style="height:190px"></div>
 <div class="env" id="env" onclick="openEnv()">
 <div class="bk"></div>
-<div class="lt"><h3>Gui em yeu!</h3><p>Chuc mung sinh nhat co gai dep nhat the gian! Tuoi moi that xinh, cuoi that nhieu, va mai ben anh nhe. Yeu em 3000! 💖<br><br><b>— Chong tuong lai 😘</b></p></div>
+<div class="lt"><h3>Gửi em yêu!</h3><p>Chúc mừng sinh nhật cô gái đẹp nhất thế gian! Tuổi mới thật xinh, cười thật nhiều, và mãi bên anh nhé. Yêu em 3000! 💖<br><br><b>— Chồng tương lai 😘</b></p></div>
 <div class="fl"></div><div class="sl">💝</div>
 </div>
-<div id="envBtn" class="hidden"><button class="btn" onclick="goStep(3)">Tiep tuc ➜</button></div>
+<div id="envBtn" class="hidden"><button class="btn" onclick="goStep(3)">Tiếp tục ➜</button></div>
 </div></section>
-<section id="s3" class="hidden"><div><p class="hint">Dem nguoc...</p><div id="cdn">3</div></div></section>
+<section id="s3" class="hidden"><div><p class="hint">Đếm ngược...</p><div id="cdn">3</div></div></section>
 <section id="s4" class="hidden"><div style="width:100%;max-width:760px">
-<div class="big">Happy Birthday <span id="herName">Em Yeu</span>!</div>
-<p class="sub">Chuc mung ngay cong chua cua anh ra doi 🎂✨</p>
+<div class="big">Happy Birthday <span id="herName">Em Yêu</span>!</div>
+<p class="sub">Chúc mừng ngày công chúa của anh ra đời 🎂✨</p>
 <div class="card"><div id="candle">🕯️🕯️🕯️</div><div class="cake">🎂</div>
-<p class="hint">Nhan nut de thoi nen + uoc nguyen!</p>
-<button class="btn" id="blowBtn" onclick="blow()">Thoi nen 🎂</button></div>
-<div class="card"><h2>💌 Loi anh muon noi</h2><div id="typebox"></div>
-<button class="btn" onclick="startType()">Doc thu 💌</button></div>
-<div class="card"><h2>💖 4 ly do anh yeu em</h2><div class="grid">
-<div class="rs"><b>1. Nu cuoi</b><br>Cuoi la anh tan chay</div>
-<div class="rs"><b>2. Tot bung</b><br>Luon quan tam moi nguoi</div>
-<div class="rs"><b>3. Kien cuong</b><br>Manh me vuot kho khan</div>
-<div class="rs"><b>4. La em</b><br>Don gian vi em la em</div>
+<p class="hint">Nhấn nút để thổi nến + ước nguyện!</p>
+<button class="btn" id="blowBtn" onclick="blow()">Thổi nến 🎂</button></div>
+<div class="card"><h2>💌 Lời anh muốn nói</h2><div id="typebox"></div>
+<button class="btn" onclick="startType()">Đọc thư 💌</button></div>
+<div class="card"><h2>💖 4 lý do anh yêu em</h2><div class="grid">
+<div class="rs"><b>1. Nụ cười</b><br>Cười là anh tan chảy</div>
+<div class="rs"><b>2. Tốt bụng</b><br>Luôn quan tâm mọi người</div>
+<div class="rs"><b>3. Kiên cường</b><br>Mạnh mẽ vượt khó khăn</div>
+<div class="rs"><b>4. Là em</b><br>Đơn giản vì em là em</div>
 </div></div>
-<div class="card"><h2>⏳ Anh da yeu em duoc</h2><div id="love"></div></div>
-<div class="card"><h2>Em co yeu anh khong? 🥺</h2>
+<div class="card"><h2>⏳ Anh đã yêu em được</h2><div id="love"></div></div>
+<div class="card"><h2>Em có yêu anh không? 🥺</h2>
 <div style="margin-top:16px;display:flex;gap:12px;justify-content:center">
-<button class="btn" onclick="yesLove()">Co! Rat nhieu 😍</button>
-<button class="btn gray" id="noBtn" onmouseover="runNo()" onclick="runNo()">Khong 😢</button>
+<button class="btn" onclick="yesLove()">Có! Rất nhiều 😍</button>
+<button class="btn gray" id="noBtn" onmouseover="runNo()" onclick="runNo()">Không 😢</button>
 </div></div>
-<button class="btn" onclick="bigBoom()">Dot phao hoa 🎆</button>
+<button class="btn" onclick="bigBoom()">Đốt pháo hoa 🎆</button>
 <p class="hint" style="padding:24px">Made with 💜 by Anh — Forever & Always</p>
 </div></section>
-<div id="musicB" onclick="tgMusic()">🎵 Nhac: Tat</div>
-<div id="editB" onclick="edit()">✏️ Doi ten</div>
+<div id="musicB" onclick="tgMusic()">🎵 Nhạc: Tắt</div>
+<div id="editB" onclick="edit()">✏️ Đổi tên</div>
 <div id="md" class="hidden"><div class="mbox">
-<div style="font-size:3rem">💍💖</div><h2>Yehhh! Anh biet ma!</h2>
-<p style="margin:12px;line-height:1.8">Anh cung yeu em nhat tren doi! Chuc mung sinh nhat cong chua! Mai ben nhau nhe! 🥰</p>
-<button class="btn" onclick="closeMd()">Yeu anh! 💜</button>
+<div style="font-size:3rem">💍💖</div><h2>Yehhh! Anh biết mà!</h2>
+<p style="margin:12px;line-height:1.8">Anh cũng yêu em nhất trên đời! Chúc mừng sinh nhật công chúa! Mãi bên nhau nhé! 🥰</p>
+<button class="btn" onclick="closeMd()">Yêu anh! 💜</button>
 </div></div>
 <audio id="au" loop><source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_558ef6608c.mp3?filename=happy-birthday-155461.mp3"></audio>
 <script src="script.js"></script>

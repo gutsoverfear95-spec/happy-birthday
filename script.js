@@ -1,15 +1,15 @@
-var cfg={name:'Em Yeu',date:'2024-02-14'};
+var cfg={name:'Em Yêu',date:'2024-02-14'};
 try{var s=JSON.parse(localStorage.getItem('bdCfg'));if(s)cfg=s;}catch(e){}
 document.getElementById('herName').textContent=cfg.name;
-function edit(){var n=prompt('Ten nguoi yeu:',cfg.name);if(n)cfg.name=n;var d=prompt('Ngay bat dau yeu (YYYY-MM-DD):',cfg.date);if(d)cfg.date=d;localStorage.setItem('bdCfg',JSON.stringify(cfg));document.getElementById('herName').textContent=cfg.name;loveTick();}
+function edit(){var n=prompt('Tên người yêu:',cfg.name);if(n)cfg.name=n;var d=prompt('Ngày bắt đầu yêu (YYYY-MM-DD):',cfg.date);if(d)cfg.date=d;localStorage.setItem('bdCfg',JSON.stringify(cfg));document.getElementById('herName').textContent=cfg.name;loveTick();}
 function goStep(n){for(var i=1;i<=4;i++)document.getElementById('s'+i).classList.add('hidden');document.getElementById('s'+n).classList.remove('hidden');window.scrollTo(0,0);if(n===3)countdown();if(n===4)party();}
 function openEnv(){document.getElementById('env').classList.add('open');burst(innerWidth/2,innerHeight/2);setTimeout(function(){document.getElementById('envBtn').classList.remove('hidden');},1200);}
 function countdown(){var el=document.getElementById('cdn'),v=3;el.textContent=v;var t=setInterval(function(){v--;if(v<=0){clearInterval(t);goStep(4);}else{el.textContent=v;}},1000);}
-function blow(){document.getElementById('candle').style.filter='grayscale(1)';document.getElementById('candle').style.opacity='.4';document.getElementById('blowBtn').textContent='Uoc di em! Dieu uoc se thanh that!';bigBoom();}
-var msg1='Gui ';
-var msg2='! Hom nay la ngay dac biet nhat - ngay em den voi the gioi nay. Cam on em da xuat hien, da cuoi, da yeu va cho anh duoc yeu em. Tuoi moi, anh chuc em: xinh dep hon moi ngay, tien day vi, uoc gi duoc nay, va... yeu anh nhieu hon hom qua mot chut thoi cung duoc. Con anh se yeu em nhieu hon hom qua rat nhieu! Happy Birthday cong chua cua anh! ';
+function blow(){document.getElementById('candle').style.filter='grayscale(1)';document.getElementById('candle').style.opacity='.4';document.getElementById('blowBtn').textContent='Ước đi em! Điều ước sẽ thành thật!';bigBoom();}
+var msg1='Gửi ';
+var msg2='! Hôm nay là ngày đặc biệt nhất - ngày em đến với thế giới này. Cảm ơn em đã xuất hiện, đã cười, đã yêu và cho anh được yêu em. Tuổi mới, anh chúc em: xinh đẹp hơn mỗi ngày, tiền đầy ví, ước gì được nấy, và... yêu anh nhiều hơn hôm qua một chút thôi cũng được. Còn anh sẽ yêu em nhiều hơn hôm qua rất nhiều! Happy Birthday công chúa của anh! ';
 function startType(){var b=document.getElementById('typebox');b.innerHTML='';var full=msg1+cfg.name+msg2;var i=0;var t=setInterval(function(){if(i>=full.length){clearInterval(t);return;}i++;b.innerHTML=full.slice(0,i)+'<span style="display:inline-block;width:3px;height:1.1em;background:#ff4d8d">|</span>';},28);}
-function loveTick(){var st=new Date(cfg.date||'2024-02-14');var d=Math.max(0,Math.floor((new Date()-st)/86400000));document.getElementById('love').innerHTML='<div><span>'+d+'</span><br>ngay</div><div><span>'+(d*24).toLocaleString()+'</span><br>gio</div><div><span>vo han</span><br>yeu thuong</div>';}
+function loveTick(){var st=new Date(cfg.date||'2024-02-14');var d=Math.max(0,Math.floor((new Date()-st)/86400000));document.getElementById('love').innerHTML='<div><span>'+d+'</span><br>ngày</div><div><span>'+(d*24).toLocaleString()+'</span><br>giờ</div><div><span>vô hạn</span><br>yêu thương</div>';}
 setInterval(loveTick,60000);loveTick();
 function runNo(){var b=document.getElementById('noBtn');b.style.position='fixed';b.style.left=(Math.random()*80)+'vw';b.style.top=(Math.random()*80)+'vh';}
 function yesLove(){var m=document.getElementById('md');m.classList.remove('hidden');bigBoom();}
@@ -30,5 +30,5 @@ function bigBoom(){for(var j=0;j<5;j++){setTimeout(function(){burst(Math.random(
 function party(){bigBoom();startType();}
 function balloons(){for(var i=0;i<14;i++){var d=document.createElement('div');d.textContent='🎈';d.className='bl';d.style.left=(Math.random()*95)+'vw';d.style.fontSize='44px';d.style.animationDuration='6s';document.body.appendChild(d);}}
 var AC=null,mOn=false;
-function tgMusic(){var a=document.getElementById('au');if(a.paused){a.play().catch(function(){melody();});document.getElementById('musicB').textContent='Nhac: Bat';}else{a.pause();document.getElementById('musicB').textContent='Nhac: Tat';mOn=false;}}
+function tgMusic(){var a=document.getElementById('au');if(a.paused){a.play().catch(function(){melody();});document.getElementById('musicB').textContent='Nhạc: Bật';}else{a.pause();document.getElementById('musicB').textContent='Nhạc: Tắt';mOn=false;}}
 function melody(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();mOn=true;var n=[261.6,261.6,293.7,329.6,329.6,293.7,261.6,392];var i=0;function pl(){if(!mOn)return;var o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);o.frequency.value=n[i%n.length];g.gain.setValueAtTime(.2,AC.currentTime);o.start();o.stop(AC.currentTime+.4);i++;setTimeout(pl,420);}pl();}catch(e){}}
