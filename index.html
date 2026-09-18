@@ -32,6 +32,16 @@
 <section id="s4" class="hidden"><div style="width:100%;max-width:760px">
 <div class="big">Happy Birthday <span id="herName">Em Yêu</span>!</div>
 <p class="sub">Chúc mừng ngày công chúa của anh ra đời 🎂✨</p>
+<div class="music-panel">
+<div class="eq" id="eq"><span></span><span></span><span></span><span></span><span></span></div>
+<div style="flex:1;min-width:200px;text-align:left"><b>🎶 Happy Birthday phiên bản Anh sáng tác</b><br><span class="hint" style="margin:0">Bấm play là có nhạc 100% — không cần mạng!</span></div>
+<button class="btn small" id="playBtn" onclick="toggleSong()">▶ Play nhạc</button>
+</div>
+<div class="music-panel">
+<div style="flex:1;text-align:left"><b>🎤 Giọng anh chúc (AI đọc)</b><br><span class="hint" style="margin:0">Đọc đúng tên người yêu luôn!</span></div>
+<button class="btn small gold" onclick="speakLove()">🔊 Nghe lời chúc</button>
+<label class="btn small ghost" style="margin-top:20px;cursor:pointer">📁 Tải nhạc 2 đứa<input type="file" id="fileUp" accept="audio/*" class="hidden" onchange="uploadSong(this)"></label>
+</div>
 <div class="card"><div id="candle">🕯️🕯️🕯️</div><div class="cake">🎂</div>
 <p class="hint">Nhấn nút để thổi nến + ước nguyện!</p>
 <button class="btn" id="blowBtn" onclick="blow()">Thổi nến 🎂</button></div>
@@ -43,22 +53,36 @@
 <div class="rs"><b>3. Kiên cường</b><br>Mạnh mẽ vượt khó khăn</div>
 <div class="rs"><b>4. Là em</b><br>Đơn giản vì em là em</div>
 </div></div>
-<div class="card"><h2>⏳ Anh đã yêu em được</h2><div id="love"></div></div>
+ <div class="card"><h2>⏳ Anh đã yêu em được</h2><div id="love"></div>
+<div class="timeline">
+<div><strong>Ngày đầu gặp</strong> — Anh đã biết đây là định mệnh 💘</div>
+<div><strong>Lần đầu nắm tay</strong> — Tim anh đập 180 nhịp/phút 😳</div>
+<div><strong>Hôm nay</strong> — Sinh nhật em, anh muốn hét lên: ANH YÊU EM! 🎂</div>
+<div><strong>Mãi mãi</strong> — Cưới nhau, già đi cùng nhau 👰🤵</div>
+</div></div>
 <div class="card"><h2>Em có yêu anh không? 🥺</h2>
 <div style="margin-top:16px;display:flex;gap:12px;justify-content:center">
 <button class="btn" onclick="yesLove()">Có! Rất nhiều 😍</button>
 <button class="btn gray" id="noBtn" onmouseover="runNo()" onclick="runNo()">Không 😢</button>
 </div></div>
+ <div id="giftBox" style="font-size:90px;cursor:pointer;animation:bt 1.2s infinite" onclick="openGift()" title="Mở quà">🎁</div>
+<p class="hint">Còn 1 món quà bí mật... chạm vào hộp quà đi!</p>
+<div id="giftOpen" class="hidden"><div style="font-size:70px">💍</div>
+<h2 class="tt" style="font-size:2.6rem">Em làm vợ anh nhé?</h2>
+<p class="hint">Đùa thôi... hoặc là thật? 😏💜</p></div>
 <button class="btn" onclick="bigBoom()">Đốt pháo hoa 🎆</button>
+<button class="btn gold" onclick="finale()">🌟 FINALE - Bất ngờ cuối cùng</button>
 <p class="hint" style="padding:24px">Made with 💜 by Anh — Forever & Always</p>
 </div></section>
-<div id="musicB" onclick="tgMusic()">🎵 Nhạc: Tắt</div>
+<div id="musicB" onclick="toggleSong()">🎵 Nhạc: Tắt</div>
 <div id="editB" onclick="edit()">✏️ Đổi tên</div>
 <div id="md" class="hidden"><div class="mbox">
 <div style="font-size:3rem">💍💖</div><h2>Yehhh! Anh biết mà!</h2>
 <p style="margin:12px;line-height:1.8">Anh cũng yêu em nhất trên đời! Chúc mừng sinh nhật công chúa! Mãi bên nhau nhé! 🥰</p>
 <button class="btn" onclick="closeMd()">Yêu anh! 💜</button>
 </div></div>
-<audio id="au" loop><source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_558ef6608c.mp3?filename=happy-birthday-155461.mp3"></audio>
+<audio id="au" loop preload="auto"><source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_558ef6608c.mp3?filename=happy-birthday-155461.mp3"></audio>
+<audio id="customAu" loop></audio>
+<div id="finaleOv" class="hidden"><div class="tt" id="finaleTxt">Anh Yêu Em!</div></div>
 <script src="script.js"></script>
 </body></html>
